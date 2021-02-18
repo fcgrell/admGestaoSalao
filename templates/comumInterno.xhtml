@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<h:head></h:head>
+ 	
+ 	<h:body>
+		<h:form id="frm">
+		
+	 <!-- Barra de ferramentas superior --> 	 	    
+		     <p:tabMenu activeIndex="2">  
+    			<p:menuitem value="Logar" url="/ui/tabMenu.jsf" icon="ui-icon-star"/>  
+    			<p:menuitem value="Documentação" url="/ui/tabMenuDocumentation.jsf" icon="ui-icon-document"/>  
+    			<p:menuitem value="Suporte" url="/ui/tabMenuSupport.jsf" icon="ui-icon-wrench"/>  
+   				<p:menuitem value="Compartilhar" url="/ui/tabMenuSocial.jsf" icon="ui-icon-person" />  
+			</p:tabMenu>
+			
+			<p:separator></p:separator>
+			
+			<h:form>  
+        
+      <!-- Campo texto para pesquisa -->                      
+    <h:panelGrid columns="4" cellpadding="5">  
+        <h:outputLabel for="name" value="Cliente:" style="font-weight:bold"/>  
+          
+        <p:inputText id="name" value="#{pprBean.firstname}" />  
+          
+         
+  
+        <h:outputText value="#{pprBean.firstname}" id="display" />  
+    </h:panelGrid>  
+      
+	</h:form>  
+	
+	<!-- ComboBox Status -->   
+           <h:form>  
+  
+    <p:selectCheckboxMenu value="#{formBean.selectedMovies}" label="Status" filter="true" filterText="Filter" filterMatchMode="startsWith" panelStyle="width:220px">  
+        <f:selectItems value="#{formBean.movies}" />  
+    </p:selectCheckboxMenu>  
+  
+    <p:separator style="margin-bottom:10px"/>  
+  
+    <p:commandButton value="Submit" update="display" oncomplete="PF('dlg').show()" />  
+  
+    <p:dialog header="Selected Movies" modal="true" showEffect="fade" hideEffect="fade" widgetVar="dlg" resizable="false">  
+        <p:dataList id="display" value="#{formBean.selectedMovies}" var="movie">  
+            #{movie}  
+        </p:dataList>  
+    </p:dialog>  
+  
+</h:form>  
+   
+			 <!-- Tabela -->
+            <h:form id="tabela">  
+      <h:panelGrid columns="2" style="margin-bottom:3px" cellpadding="2"  
+                 columnClasses="label, column">  
+            </h:panelGrid> 
+            </h:form> 
+			
+			<ui:insert name="pageCenter"></ui:insert>
+	</h:form>  
+					
+ </h:body>
+ 	
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+	<ui:composition template="../templates/comumInterno.xhtml">
+		
+		<ui:define name="pageCenter">
+			
+			<h:panelGrid columns="2" id="panel">
+			
+				 <h:outputLabel for="dados" value="Dados:" /> 
+				 <p:inputText id="dados" value="#{visualizaDadosMB.impress.dados}"/>
+				 <p:inputText id="dados2" value="#{visualizaDadosMB.impress.dados2}"/>
+				 <p:inputText id="dados3" value="#{visualizaDadosMB.impress.dados3}"/>  
+				 <p:inputText id="dados4" value="#{visualizaDadosMB.impress.dados4}"/>  
+				 <p:inputText id="dados5" value="#{visualizaDadosMB.impress.dados5}"/>  
+				 <p:inputText id="dados6" value="#{visualizaDadosMB.impress.dados6}"/>  
+				 <p:inputText id="dados7" value="#{visualizaDadosMB.impress.dados7}"/>    
+				 
+				 <h:outputLabel for="cliente" value="Cliente:" /> 
+				 <p:inputText id="cliente" value="#{visualizaDadosMB.impress.cliente}" />
+				 <p:inputText id="cliente2" value="#{visualizaDadosMB.impress.cliente2}" />
+				 <p:inputText id="cliente3" value="#{visualizaDadosMB.impress.cliente3}" />
+				 <p:inputText id="cliente4" value="#{visualizaDadosMB.impress.cliente4}" />
+				 <p:inputText id="cliente5" value="#{visualizaDadosMB.impress.cliente5}" />
+				 <p:inputText id="cliente6" value="#{visualizaDadosMB.impress.cliente6}" />
+				 <p:inputText id="cliente7" value="#{visualizaDadosMB.impress.cliente7}" />			 
+				
+			 </h:panelGrid>
+			 			 
+			 <p:commandButton value="Submit"  action="#{visualizaDadosMB.atualizar}" update="panel" style="margin-right:20px;" /> 
+			 
+				
+		</ui:define>
+		
+	</ui:composition>
+</html>

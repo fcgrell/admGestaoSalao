@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+	<ui:composition template="../templates/comumInterno.xhtml">
+		
+		<ui:define name="pageCenter">
+			
+			 <p:dataTable var="impressora" value="#{consultaStatus.listaImpressora}">  
+			       
+			        <p:column headerText="Dados">  
+			            <h:outputText value="#{impressora.dados}" />
+			             <br/>
+			            <h:outputText value="#{impressora.dados2}" />
+			             <br/>
+			            <h:outputText value="#{impressora.dados3}" />
+			             <br/>
+			            <h:outputText value="#{impressora.dados4}" />
+			             <br/>
+			            <h:outputText value="#{impressora.dados5}" />
+			             <br/>
+			            <h:outputText value="#{impressora.dados6}" />
+			             <br/>
+			            <h:outputText value="#{impressora.dados7}" />  
+			        </p:column>  
+			  
+			        <p:column headerText="Cliente">  
+			            <h:outputText value="#{impressora.cliente}" />
+			            <br/>  
+			            <h:outputText value="#{impressora.cliente2}" />
+			            <br/> 
+			            <h:outputText value="#{impressora.cliente3}" />
+			            <br/>  
+			            <h:outputText value="#{impressora.cliente4}" />
+			            <br/>  
+			            <h:outputText value="#{impressora.cliente5}" />
+			            <br/>  
+			            <h:outputText value="#{impressora.cliente6}" />
+			            <br/>  
+			            <h:outputText value="#{impressora.cliente7}" />   
+			        </p:column>  
+			     
+			    </p:dataTable> 
+			    
+			   
+		</ui:define>
+		
+	</ui:composition>
+</html>
